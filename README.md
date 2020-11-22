@@ -1,2 +1,2 @@
 # proiect-de-an
-Un proiect ce permite automatizarea gestionării unei companii de IT.
+Un proiect ce permite automatizarea gestionării unei companii de transport.
