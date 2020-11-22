@@ -1,0 +1,23 @@
+<tr>
+    <td>{{ teacher.first_name }}</td>
+    <td>{{ teacher.last_name }}</td>
+    <td>{{ teacher.given_course }}</td>
+    <td>{{ teacher.departament }}</td>
+    <td>
+        <button type="button"
+                onclick="document.getElementById('row{{ teacher.id }}-edit').style.display = 'block';document.getElementById('row{{ teacher.id }}-show').style.display = 'none';">
+            Edit
+        </button>
+        <div id="delete-dialog-{{ teacher.id }}" style="display:none;">
+            <p>Are you sure you want to delete?</p>
+            <button type="button" onclick=";">No
+            </button>
+            <form action="/delete-teacher/" method="post">
+                {% csrf_token %}
+                <input name="id" type="hidden" value="{{ teacher.id }}">
+                <input type="submit" value="Yes">
+            </form>
+        </div>
+        <button onclick="" id="delete-button{{ teacher.id }}">Delete</button>
+    </td>
+</tr>
